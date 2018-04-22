@@ -1,0 +1,7 @@
+Dead simple GoPro GPR RAW format wrapper for Python
+
+>>> from pygpr import gpr
+>>> gpr_obj = gpr("../gpr/gpr/build/source/app/gpr_tools/gpr_tools")
+>>> gpr_obj.convert("GOPR0001.GPR,"Raw_sunset.DNG")
+
+Get the GPR program from https://github.com/gopro/gpr and run setup.sh to compile.
