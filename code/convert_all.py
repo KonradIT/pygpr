@@ -3,7 +3,7 @@ from os.path import isfile, join
 from pygpr import gpr
 import argparse
 ap = argparse.ArgumentParser()
-ap.add_argument("-x", "--gpr", help = "path to the gpr program")
+ap.add_argument("-x", "--gpr", help = "path to the gpr program", default="gpr_tools")
 
 args = vars(ap.parse_args())
 gpr_obj = gpr(args["gpr"])
