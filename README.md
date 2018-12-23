@@ -25,13 +25,16 @@ Dead simple GoPro GPR RAW format wrapper for Python
 
 1. Converts all *.GPR raw files in my SD card to DNG to edit easier later (I use Luminance to apply presets and then export to JPG)
 
-    from os import listdir
-    from os.path import isfile, join
-    from pygpr import gpr
 
-    gpr_obj = gpr()
+````
+from os import listdir
+from os.path import isfile, join
+from pygpr import gpr
 
-    raw_images = [f for f in listdir(".") if isfile(join(".", f)) and f.endswith(".GPR")]
-    for img in raw_images:
-        dng_name=img.split(".GPR")[0]+".DNG"
-        gpr_obj.convert(img, dng_name)
+gpr_obj = gpr()
+
+raw_images = [f for f in listdir(".") if isfile(join(".", f)) and f.endswith(".GPR")]
+for img in raw_images:
+    dng_name=img.split(".GPR")[0]+".DNG"
+    gpr_obj.convert(img, dng_name)
+````
